@@ -1,0 +1,27 @@
+<div class="container" *ngIf="!accepted">
+  <h1>
+    You deserve me 💖🌸 <br />
+    Congratulations, I like your choice ❤️
+  </h1>
+
+  <button class="yes" (click)="accept()">Obviously Yes❤️🔥</button>
+
+  <button
+    class="no"
+    [ngStyle]="{ left: noX + 'px', top: noY + 'px' }"
+    (mouseenter)="moveNo()"
+  >
+    No 😒
+  </button>
+</div>
+
+<div class="success" *ngIf="accepted">
+  <!-- 💥 CRACKERS BURST -->
+  <div class="burst">
+    <span *ngFor="let b of burstArray"></span>
+  </div>
+
+  <h1>Yayyy 💖</h1>
+  <p>I knew it 😍</p>
+  <p>Happy Valentine’s Day 💌</p>
+</div>
